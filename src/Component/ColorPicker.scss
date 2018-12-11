@@ -1,0 +1,55 @@
+$red: #F47373;
+$orange: #FF8A65;
+$green: #37D67A;
+$blue: #2ccce4;
+$pupple: #ba68c8;
+
+.colorpicker{
+  padding: 15px 0;
+  text-align: center;
+}
+
+.colorpicker__color{
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background: #F00;
+  border: 3px solid #FFF;
+  border-radius: 5px;
+  box-shadow: 0 0 3px #555;
+  margin: 0 20px;
+  outline: none;
+
+  &:hover{
+    opacity: 0.7;
+    cursor: pointer;
+  }
+}
+
+.color-picked{
+  box-shadow: 0 0 10px #000;
+
+  &:hover{
+    opacity: 1;
+  }
+}
+
+.color--red{
+  background: $red;
+}
+
+.color--orange{
+  background: $orange;
+}
+
+.color--green{
+  background: $green;
+}
+
+.color--blue{
+  background: $blue;
+}
+
+.color--pupple{
+  background: $pupple;
+}

@@ -1,0 +1,24 @@
+$blue: #2ccce4;
+
+.todolist{
+  width: 100%;
+  box-shadow: 2px 2px 10px #999;
+  background: #fff;
+
+  &, .todolist__title{
+    border-radius: 5px 5px 0 0;
+  }
+}
+
+.todolist__title{
+  padding: 15px;
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  background: $blue;
+  text-shadow: 1px 1px 3px #fff;
+}
+
+.todolist__content{
+  padding: 20px;
+}
