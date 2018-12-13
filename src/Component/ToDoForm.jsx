@@ -1,6 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+
+import Button from '@material-ui/core/Button';
+import blue from '@material-ui/core/colors/blue';
+import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import './ToDoForm.scss';
+
+const theme = createMuiTheme({
+  palette: {
+    primary: blue,
+  },
+});
 
 class ToDoForm extends React.Component {
   constructor(props) {
@@ -42,8 +52,12 @@ class ToDoForm extends React.Component {
 
     return (
       <React.Fragment>
-        <input type="text" className="todolist_input" placeholder="Type here what you need to do." value={text} onChange={this.onChange} onKeyPress={this.onKeyPress} />
-        <button type="submit" onClick={this.onSubmit}>Add</button>
+        <input type="text" className="todolist__input" placeholder="Type here what you need to do." value={text} onChange={this.onChange} onKeyPress={this.onKeyPress} />
+        <MuiThemeProvider theme={theme}>
+          <Button variant="contained" color="primary" onClick={this.onSubmit} className="todolist__button">
+            Add
+          </Button>
+        </MuiThemeProvider>
       </React.Fragment>
     );
   }

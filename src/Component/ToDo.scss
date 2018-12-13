@@ -1,4 +1,4 @@
-$blue: #2ccce4;
+$blue: #4dabf5;
 
 .todolist{
   width: 100%;
@@ -16,9 +16,14 @@ $blue: #2ccce4;
   font-size: 28px;
   font-weight: bold;
   background: $blue;
-  text-shadow: 1px 1px 3px #fff;
+  text-shadow: 1px 1px 3px #000;
+  color:#FFF;
 }
 
 .todolist__content{
   padding: 20px;
+}
+
+.todolist_hr{
+  border:1px solid #EEE;
 }

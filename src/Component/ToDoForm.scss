@@ -1,6 +1,11 @@
-.todolist_input{
+.todolist__input{
   border: 1px solid #CCC;
   padding: 10px;
   width: 85%;
   box-sizing: border-box;
+}
+
+.todolist__button{
+  margin-left: 1% !important;
+  width: 14%;
 }

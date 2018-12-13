@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import './ToDo.scss';
 import ToDoForm from './ToDoForm';
 import ColorPicker from './ColorPicker';
+import HelperButton from './HelperButton';
 import ToDoList from './ToDoList';
 
 class ToDo extends React.Component {
@@ -12,6 +13,8 @@ class ToDo extends React.Component {
     this.handleAdd = this.handleAdd.bind(this);
     this.handleColor = this.handleColor.bind(this);
     this.handleDone = this.handleDone.bind(this);
+    this.handleAllDone = this.handleAllDone.bind(this);
+    this.handleRemove = this.handleRemove.bind(this);
 
     this.state = {
       list: [],
@@ -82,6 +85,31 @@ class ToDo extends React.Component {
     });
   }
 
+  handleAllDone() {
+    const { list } = this.state;
+    const newList = [...list];
+    newList.forEach((e) => {
+      e.done = true;
+    });
+
+    this.setState({
+      list: newList,
+    });
+  }
+
+  handleRemove() {
+    const { list } = this.state;
+    const clonedList = [...list];
+    const newList = [];
+    clonedList.forEach((e) => {
+      if (!e.done) newList.push(e);
+    });
+
+    this.setState({
+      list: newList,
+    });
+  }
+
   render() {
     const { title, className } = this.props;
     const { color, list } = this.state;
@@ -92,6 +120,8 @@ class ToDo extends React.Component {
         <div className="todolist__content">
           <ToDoForm onSubmit={this.handleAdd} />
           <ColorPicker onChange={this.handleColor} color={color} />
+          <hr className="todolist_hr" />
+          <HelperButton handleAllDone={this.handleAllDone} handleRemove={this.handleRemove} />
           <ToDoList list={list} onCheck={this.handleDone} />
         </div>
       </div>
