@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import swal from 'sweetalert';
 import './ToDo.scss';
 import ToDoForm from './ToDoForm';
 import ColorPicker from './ColorPicker';
@@ -86,27 +87,54 @@ class ToDo extends React.Component {
   }
 
   handleAllDone() {
-    const { list } = this.state;
-    const newList = [...list];
-    newList.forEach((e) => {
-      e.done = true;
-    });
+    swal({
+      title: 'Are you sure?',
+      text: 'Are you sure you have done everything?',
+      icon: 'warning',
+      buttons: true,
+    }).then((result) => {
+      if (result) {
+        const { list } = this.state;
+        const newList = [...list];
+        newList.forEach((e) => {
+          e.done = true;
+        });
 
-    this.setState({
-      list: newList,
+        this.setState({
+          list: newList,
+        });
+
+        swal('Your task is all over!', {
+          icon: 'success',
+        });
+      }
     });
   }
 
   handleRemove() {
-    const { list } = this.state;
-    const clonedList = [...list];
-    const newList = [];
-    clonedList.forEach((e) => {
-      if (!e.done) newList.push(e);
-    });
+    swal({
+      title: 'Are you sure?',
+      text: 'Do you really want to remove everything?',
+      icon: 'warning',
+      buttons: true,
+      dangerMode: true,
+    }).then((result) => {
+      if (result) {
+        const { list } = this.state;
+        const clonedList = [...list];
+        const newList = [];
+        clonedList.forEach((e) => {
+          if (!e.done) newList.push(e);
+        });
 
-    this.setState({
-      list: newList,
+        this.setState({
+          list: newList,
+        });
+
+        swal('All done task has been deleted!', {
+          icon: 'success',
+        });
+      }
     });
   }
 
