@@ -1,0 +1,112 @@
+.todolist {
+  width: 100%;
+  box-shadow: 2px 2px 10px #999;
+  background: #fff; }
+  .todolist, .todolist .todolist__title {
+    border-radius: 5px 5px 0 0; }
+
+.todolist__title {
+  padding: 15px;
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  background: #4dabf5;
+  text-shadow: 1px 1px 3px #000;
+  color: #FFF; }
+
+.todolist__content {
+  padding: 20px; }
+
+.todolist_hr {
+  border: 1px solid #EEE; }
+
+.todolist__input {
+  border: 1px solid #CCC;
+  padding: 10px;
+  width: 85%;
+  box-sizing: border-box; }
+
+.todolist__button {
+  margin-left: 1% !important;
+  width: 14%; }
+
+.colorpicker {
+  padding: 15px 0;
+  text-align: center; }
+
+.colorpicker__color {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background: #F00;
+  border: 3px solid #FFF;
+  border-radius: 5px;
+  box-shadow: 0 0 3px #555;
+  margin: 0 20px;
+  outline: none; }
+  .colorpicker__color:hover {
+    opacity: 0.7;
+    cursor: pointer; }
+
+.color-picked {
+  box-shadow: 0 0 10px #000; }
+  .color-picked:hover {
+    opacity: 1; }
+
+.color--red {
+  background: #F47373; }
+
+.color--orange {
+  background: #FF8A65; }
+
+.color--green {
+  background: #37D67A; }
+
+.color--blue {
+  background: #2ccce4; }
+
+.color--pupple {
+  background: #ba68c8; }
+
+.helperbutton {
+  text-align: right; }
+
+.helperbutton__btn {
+  margin-left: 10px !important; }
+
+
+.todolistitem {
+  overflow: hidden;
+  cursor: pointer;
+  margin: 5px 0;
+  width: 100%; }
+  .todolistitem:hover {
+    background: #EEE; }
+
+.todolistitem-done {
+  background: #F5F5F5;
+  color: #999; }
+  .todolistitem-done > .todolistitem__bar {
+    background: #CCC !important; }
+  .todolistitem-done > .todolistitem__text {
+    text-decoration: line-through; }
+
+.todolistitem__bar {
+  width: 7px;
+  height: 30px;
+  float: left; }
+
+.todolistitem__text {
+  float: left;
+  padding: 3px 0;
+  height: 30px;
+  box-sizing: border-box;
+  margin-left: 10px; }
+
+body {
+  background: #EEE; }
+
+.content {
+  width: 512px;
+  margin: 50px auto; }
+

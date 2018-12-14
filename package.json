@@ -1,17 +1,22 @@
 {
   "name": "todo-list",
   "title": "ToDo List App",
-  "version": "1.0.1",
-  "dependencies": {},
+  "version": "1.0.2",
+  "dependencies": {
+    "@material-ui/core": "^3.6.2",
+    "classnames": "^2.2.6",
+    "prop-types": "^15.6.2",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "sweetalert": "^2.1.2"
+  },
   "devDependencies": {
     "@babel/core": "^7.2.0",
     "@babel/polyfill": "^7.0.0",
     "@babel/preset-env": "^7.2.0",
     "@babel/preset-react": "^7.0.0",
-    "@material-ui/core": "^3.6.2",
     "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.4",
-    "classnames": "^2.2.6",
     "css-loader": "^1.0.1",
     "eslint": "^5.9.0",
     "eslint-config-airbnb": "^17.1.0",
@@ -23,9 +28,6 @@
     "html-webpack-plugin": "^3.2.0",
     "mini-css-extract-plugin": "^0.4.5",
     "node-sass": "^4.10.0",
-    "prop-types": "^15.6.2",
-    "react": "^16.6.3",
-    "react-dom": "^16.6.3",
     "react-hot-loader": "^4.3.12",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
@@ -43,5 +45,28 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "useBuiltIns": "usage"
+        }
+      ],
+      "@babel/preset-react"]
+  },
+  "eslintConfig": {
+    "extends": "airbnb",
+    "parser": "babel-eslint",
+    "env": {
+        "browser": true
+    },
+    "rules": {
+        "import/no-extraneous-dependencies": 0,
+        "jsx-a11y/no-static-element-interactions": 0,
+        "jsx-a11y/click-events-have-key-events": 0,
+        "no-alert": 0
+    }
+}
 }
