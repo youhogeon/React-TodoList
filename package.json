@@ -1,7 +1,7 @@
 {
   "name": "todo-list",
   "title": "ToDo List App",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "dependencies": {
     "@material-ui/core": "^3.6.2",
     "classnames": "^2.2.6",
