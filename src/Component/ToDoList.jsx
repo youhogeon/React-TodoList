@@ -7,7 +7,7 @@ const ToDoList = (props) => {
   const { list, onCheck } = props;
 
   return (
-    <React.Fragment>
+    <div className="todolist">
       {list.map(v => (
         <ToDoListItem
           key={v.id}
@@ -18,7 +18,7 @@ const ToDoList = (props) => {
           onCheck={onCheck}
         />
       ))}
-    </React.Fragment>
+    </div>
   );
 };
 

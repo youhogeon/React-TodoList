@@ -1,6 +1,6 @@
 $blue: #4dabf5;
 
-.todolist{
+.todo{
   width: 100%;
   box-shadow: 2px 2px 10px #999;
   background: #fff;
@@ -10,7 +10,7 @@ $blue: #4dabf5;
   }
 }
 
-.todolist__title{
+.todo__title{
   padding: 15px;
   text-align: center;
   font-size: 28px;
@@ -20,10 +20,10 @@ $blue: #4dabf5;
   color:#FFF;
 }
 
-.todolist__content{
+.todo__content{
   padding: 20px;
 }
 
-.todolist_hr{
+.todo_hr{
   border:1px solid #EEE;
 }

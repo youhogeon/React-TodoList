@@ -1,11 +1,11 @@
-.todolist {
+.todo {
   width: 100%;
   box-shadow: 2px 2px 10px #999;
   background: #fff; }
-  .todolist, .todolist .todolist__title {
+  .todo, .todo .todolist__title {
     border-radius: 5px 5px 0 0; }
 
-.todolist__title {
+.todo__title {
   padding: 15px;
   text-align: center;
   font-size: 28px;
@@ -14,21 +14,25 @@
   text-shadow: 1px 1px 3px #000;
   color: #FFF; }
 
-.todolist__content {
+.todo__content {
   padding: 20px; }
 
-.todolist_hr {
+.todo_hr {
   border: 1px solid #EEE; }
 
-.todolist__input {
-  border: 1px solid #CCC;
-  padding: 10px;
-  width: 85%;
-  box-sizing: border-box; }
+.todolist__form {
+  display: flex; }
 
-.todolist__button {
+.todolist__form__input {
+  border: 0;
+  border-bottom: 1px solid #CCC;
+  padding: 10px;
+  box-sizing: border-box;
+  flex-grow: 1; }
+
+.todolist__form__button {
   margin-left: 1% !important;
-  width: 14%; }
+  width: 64px; }
 
 .colorpicker {
   padding: 15px 0;
@@ -42,7 +46,7 @@
   border: 3px solid #FFF;
   border-radius: 5px;
   box-shadow: 0 0 3px #555;
-  margin: 0 20px;
+  margin: 0 5%;
   outline: none; }
   .colorpicker__color:hover {
     opacity: 0.7;
@@ -76,10 +80,10 @@
 
 
 .todolistitem {
-  overflow: hidden;
   cursor: pointer;
   margin: 5px 0;
-  width: 100%; }
+  width: 100%;
+  display: flex; }
   .todolistitem:hover {
     background: #EEE; }
 
@@ -92,16 +96,15 @@
     text-decoration: line-through; }
 
 .todolistitem__bar {
-  width: 7px;
-  height: 30px;
-  float: left; }
+  min-width: 6px;
+  align-items: stretch; }
 
 .todolistitem__text {
-  float: left;
   padding: 3px 0;
-  height: 30px;
   box-sizing: border-box;
-  margin-left: 10px; }
+  margin: auto;
+  margin-left: 10px;
+  word-break: break-all; }
 
 body {
   background: #EEE; }
@@ -109,4 +112,9 @@ body {
 .content {
   width: 512px;
   margin: 50px auto; }
+
+@media (max-width: 530px) {
+  .content {
+    width: 96%;
+    margin: 50px 2%; } }
 

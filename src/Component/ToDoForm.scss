@@ -1,11 +1,16 @@
-.todolist__input{
-  border: 1px solid #CCC;
-  padding: 10px;
-  width: 85%;
-  box-sizing: border-box;
+.todolist__form{
+  display: flex;
 }
 
-.todolist__button{
+.todolist__form__input{
+  border: 0;
+  border-bottom: 1px solid #CCC;
+  padding: 10px;
+  box-sizing: border-box;
+  flex-grow: 1;
+}
+
+.todolist__form__button{
   margin-left: 1% !important;
-  width: 14%;
+  width: 64px;
 }

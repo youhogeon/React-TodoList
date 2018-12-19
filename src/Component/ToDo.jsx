@@ -143,12 +143,12 @@ class ToDo extends React.Component {
     const { color, list } = this.state;
 
     return (
-      <div className={`todolist ${className}`}>
-        <div className="todolist__title">{title}</div>
-        <div className="todolist__content">
+      <div className={`todo ${className}`}>
+        <div className="todo__title">{title}</div>
+        <div className="todo__content">
           <ToDoForm onSubmit={this.handleAdd} />
           <ColorPicker onChange={this.handleColor} color={color} />
-          <hr className="todolist_hr" />
+          <hr className="todo_hr" />
           <HelperButton handleAllDone={this.handleAllDone} handleRemove={this.handleRemove} />
           <ToDoList list={list} onCheck={this.handleDone} />
         </div>

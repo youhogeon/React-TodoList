@@ -51,14 +51,14 @@ class ToDoForm extends React.Component {
     const { text } = this.state;
 
     return (
-      <React.Fragment>
-        <input type="text" className="todolist__input" placeholder="Type here what you need to do." value={text} onChange={this.onChange} onKeyPress={this.onKeyPress} />
+      <div className="todolist__form">
+        <input type="text" className="todolist__form__input" placeholder="Type here what you need to do." value={text} onChange={this.onChange} onKeyPress={this.onKeyPress} />
         <MuiThemeProvider theme={theme}>
-          <Button variant="contained" color="primary" onClick={this.onSubmit} className="todolist__button">
+          <Button variant="contained" color="primary" onClick={this.onSubmit} className="todolist__form__button">
             Add
           </Button>
         </MuiThemeProvider>
-      </React.Fragment>
+      </div>
     );
   }
 }

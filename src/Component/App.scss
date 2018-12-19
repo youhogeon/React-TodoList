@@ -8,3 +8,10 @@ body{
   width: 512px;
   margin: 50px auto;
 }
+
+@media(max-width: 530px){
+  .content{
+    width : 96%;
+    margin: 50px 2%;
+  }
+}
